@@ -1,0 +1,44 @@
+# Directory generate durante la compilazione
+obj/
+
+# Directory binarie generate durante la compilazione
+bin/
+
+# Directory della configurazione del progetto locale
+.vs/
+
+# File di configurazione utente per Visual Studio
+*.suo
+*.user
+*.suo
+
+# File temporanei creati da Visual Studio
+*.~*
+
+# File di configurazione del progetto Web
+*.csproj.user
+*.vbproj.user
+*.vjsproj.user
+
+# File di configurazione del linguaggio di programmazione
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# File di log
+*.log
+
+# File temporanei
+*.tmp
+*.tmp_proj
+*.tmp_proj_in
+*.bak
+*.cache
+*.dbmdl
+*.dbproj.schemaview
+*.dbproj.user
+*.Debug*
+*.Release*
+

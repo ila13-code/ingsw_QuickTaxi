@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>WebSharper.Bing.Maps</name>
+  </assembly>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.TilesY">
+    <summary>The vertical dimension of the imagery in number of tiles.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.TilesX">
+    <summary>The horizontal dimension of the imagery in number of tiles.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.Orientation">
+    <summary>The orientation of the viewport for the imagery metadata in degrees where 0 = North [default], 90 = East, 180 = South, 270 = West.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ZoomMin">
+    <summary>The minimum zoom level available for this imagery set.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ZoomMax">
+    <summary>The maximum zoom level available for this imagery set.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.VintageEnd">
+    <summary>The latest date found in an imagery set or for a specific imagery tile.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.VintageStart">
+    <summary>The earliest date found in an imagery set or for a specific imagery tile.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ImageUrlSubdomains">
+    <summary>One or more URL subdomains that may be used when constructing an image tile URL.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ImageUrl">
+    <summary>Either a URL template for an image tile if a specific point is specified, or a general URL template for the specified imagery set.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ImageWidth">
+    <summary>The width of the image tile.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ImageryMetadataResource.ImageHeight">
+    <summary>The height of the image tile.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.ProviderInfo">
+    <summary>The contact information for the provider of the transit information.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.PhoneNumber">
+    <summary>The phone number of the transit agency.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.Uri">
+    <summary>The URI for the transit agency.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.LineTextColor">
+    <summary>The color to use for text associated with the transit line. The color is provided as an RGB value.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.LineColor">
+    <summary>The color associated with the transit line. The color is provided as an RGB value.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.AgencyName">
+    <summary>The name of the transit agency.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.AgencyId">
+    <summary>The ID associated with the transit agency.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.AbbreviatedName">
+    <summary>The abbreviated name of the transit line, such as the bus number.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TransitLine.VerboseName">
+    <summary>The full name of the transit line.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.RoutePath">
+    <summary>A representation of the path of a route. A RoutePath is returned only if the routePathOutput parameter is set to Points. A RoutePath is defined by a Line element that contains of a collection of points. The path of the route is the line that connects these Points. For more information about the fields contained in a route Path, see the Route Path Fields section below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.RouteLegs">
+    <summary>Information about a section of a route between two waypoints. For more information about the fields contained ina routeLeg, see the Route Leg Fields section below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.TravelDuration">
+    <summary>The time in seconds that it takes to travel a corresponding TravelDistance.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.TravelDistance">
+    <summary>The physical distance covered by the entire route. Note: This value is not supported for the Transit travel mode.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.DurationUnit">
+    <summary>The unit used for time of travel.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.DistanceUnit">
+    <summary>The unit used for distance.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.Bbox">
+    <summary>Defines a rectangular area by using latitude and longitude boundaries that contain the corresponding route or location. A bounding box contains SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude elements.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteResource.Id">
+    <summary>A unique ID for the resource.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RoutePath.Point">
+    <summary>The coordinates of a point on the Earth.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RoutePath.Line">
+    <summary>When the points in the line are connected, they represent the path of the route.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.ItineraryItems">
+    <summary>Information that defines a step in the route. For information about the fields that make up the ItineraryItem collection, see the Itinerary Item Fields table below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.EndLocation">
+    <summary>Information about the location of the ending waypoint for a route. An EndLocation is provided only when the waypoint is specified as a landmark or an address. For more information about the fields contained in a Location collection, see the Locations Fields table below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.StartLocation">
+    <summary>Information about the location of the starting waypoint for a route. A StartLocation is provided only when the waypoint is specified as a landmark or an address. For more information about the fields contained in a Location collection, see the Location Fields table below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.ActualEnd">
+    <summary>The Point (latitude and longitude) that was used as the actual ending location for the route leg. In most cases, the ActualEnd is the same as the requested waypoint. However, if a waypoint is not close to a road, the Routes API chooses a location on the nearest road as the ending point of the route. This ActualEnd element contains the latitude and longitude of this new location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.ActualStart">
+    <summary>The Point (latitude and longitude) that was used as the actual starting location for the route leg. In most cases, the ActualStart is the same as the requested waypoint. However, if a waypoint is not close to a road, the Routes API chooses a location on the nearest road as the starting point of the route. This ActualStart element contains the latitude and longitude of this new location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.TravelDuration">
+    <summary>The time, in seconds, that it takes to travel a corresponding TravelDistance.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RouteLeg.TravelDistance">
+    <summary>The physical distance covered by a route leg.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Warnings">
+    <summary>Information about a condition that may affect a specific step in the route. Warning is an optional element and a route step can contain more than one warning.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TravelMode">
+    <summary>The mode of travel for a specific step in the route. Note: This value is not supported for ItineraryItems that are part of a ChildItineraryItems collection.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TravelDuration">
+    <summary>The time in seconds that it takes to travel a corresponding TravelDistance.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TravelDistance">
+    <summary>The physical distance covered by this route step. Note: This value is not supported for the Transit travel mode.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TransitTerminus">
+    <summary>The end destination for the transit line in the direction you are traveling.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TransitStopId">
+    <summary>The ID assigned to the transit stop by the transit agency.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TransitLine">
+    <summary>Information about the transit line associated with the itinerary item. For more information about the fields contained in the TransitLine collection, see the Transit Line Fields table below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TowardsRoadName">
+    <summary>The name of the street that the route goes towards in the first itinerary item.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.TollZone">
+    <summary>The name or number of the toll zone.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Time">
+    <summary>The arrival or departure time for the transit step.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Signs">
+    <summary>Signage text for the route. There may be more than one sign value for an itinerary item.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.SideOfStreet">
+    <summary>The side of the street where the destination is found based on the arrival direction. This field applies to the last itinerary item only.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.ManeuverPoint">
+    <summary>The coordinates of a point on the Earth where a maneuver is required, such as a left turn. A ManeuverPoint contains Latitude and Longitude elements. Note: This value is not supported for ItineraryItems that are part of a ChildItineraryItems collection.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Instruction">
+    <summary>A description of a maneuver in a set of directions. In addition to the content of the instruction field, this field has an attribute maneuverType that is set to the type of maneuver, such as 'TurnLeft.'</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.IconType">
+    <summary>The type of icon to display.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Hints">
+    <summary>Additional information that may be helpful in following a route. In addition to the hint text, this element has an attribute hintType that specifies what the hint refers to, such as “NextIntersection.” Hint is an optional element and a route step can contain more than one hint.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Exit">
+    <summary>The name or number of the exit associated with this itinerary step.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.Details">
+    <summary>Information about one of the maneuvers that is part of the itinerary item. An ItineraryItem can contain more than one Detail collection. For information about the fields contained in a Detail collection, see the Detail Fields table below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.CompassDirection">
+    <summary>The direction of travel associated with a maneuver on a route, such as south or southwest. Note: This value is not supported for the Transit travel mode.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryItem.ChildItineraryItems">
+    <summary>A collection of ItineraryItems that divides an itinerary item into smaller steps. An itinerary item can have only one set of ChildItineraryItems.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.RoadType">
+    <summary>The type of road.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.EndPathIndices">
+    <summary>StartPathIndices and EndPathIndices specify index values for specific route path points that are returned in the response when the routePathOutput parameter is set to Points. Together, these two index values define a range of route path points that correspond to a maneuver. Route path index values are integers where the first route path point has an index value of 0.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.StartPathIndices">
+    <summary>StartPathIndices and EndPathIndices specify index values for specific route path points that are returned in the response when the routePathOutput parameter is set to Points. Together, these two index values define a range of route path points that correspond to a maneuver. Route path index values are integers where the first route path point has an index value of 0.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.Names">
+    <summary>A street, highway or intersection where the maneuver occurs. If the maneuver is complex, there may be more than one name field in the details collection. The name field may also have no value. This can occur if the name is not known or if a street, highway or intersection does not have a name. Note: This value is only supported for the transit travel mode.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.ManeuverType">
+    <summary>The type of maneuver described by this detail collection. The ManeuverType in A detail collection can provide information for a portion of the maneuver described by the maneuverType attribute of the corresponding Instruction. For example the maneuverType attribute of an Instruction may specify TurnLeftThenTurnRight as the maneuver while the associated detail items may specify specifics about the TurnLeft and TurnRight maneuvers.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ItineraryDetail.CompassDegrees">
+    <summary>The direction in degrees. Note: This value is not supported for the Transit travel mode.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.ErrorDetails">
+    <summary>A collection of error descriptions. For example, ErrorDetails can identify parameter values that are not valid or missing.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.ResourceSets">
+    <summary>A collection of ResourceSet objects. A ResourceSet is a container of Resources returned by the request. For more information, see the ResourceSet section below.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.BrandLogoUri">
+    <summary>A URL that references a brand image to support contractual branding requirements.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.Copyright">
+    <summary>A copyright notice.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.TraceId">
+    <summary>A unique identifier for the request.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.AuthenticationResultCode">
+    <summary>A status code that offers additional information about authentication success or failure.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.StatusDescription">
+    <summary>A description of the HTTP status code.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.RestResponse.StatusCode">
+    <summary>The HTTP Status code for the request.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ResourceSet.Resources">
+    <summary>A collection of one or more resources. The resources that are returned depend on the request. Information about resources is provided in the API reference for each Bing Maps REST Services API.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.ResourceSet.EstimatedTotal">
+    <summary>An estimate of the total number of resources in the ResourceSet.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.Confidence">
+    <summary>The confidence in the match.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.Address">
+    <summary>The postal address for the location. An address can contain AddressLine, AdminDistrict, AdminDistrict2, CountryRegion, FormattedAddress, Locality, and PostalCode fields.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.EntityType">
+    <summary>The classification of the geographic entity returned, such as Address.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.Bbox">
+    <summary>A geographic area that contains the location. A bounding box contains SouthLatitude, WestLongitude, NorthLatitude, and EastLongitude values in units of degrees.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.Point">
+    <summary>The latitude and longitude coordinates of the location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.LocationResource.Name">
+    <summary>The name of the resource.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Maps.RegisterModule(System.String,System.String,System.String)">
+    <summary>Registers a module with the map control. The name of the module is specified in moduleKey, the module script is defined in scriptUrl, and the options provides the location of a *.css file to load with the module.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Maps.RegisterModule(System.String,System.String)">
+    <summary>Registers a module with the map control. The name of the module is specified in moduleKey, the module script is defined in scriptUrl.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Maps.ModuleLoaded(System.String)">
+    <summary>Signals that the specified module has been loaded and if specified, calls the callback function in loadModule. Call this method at the end of your module script.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Maps.LoadModule(System.String,WebSharper.Bing.Maps.LoadModuleArgs)">
+    <summary>Loads the specified registered module, making its functionality available. A function is specified that is called when the module is loaded.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Maps.LoadModule(System.String)">
+    <summary>Loads the specified registered module, making its functionality available.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileSource.ToString">
+    <summary>Converts the Color object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileSource.GetWidth">
+    <summary>Returns the pixel width of each tile in the tile source.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileSource.GetUriConstructor">
+    <summary>Returns a string that constructs tile URLs used to retrieve tiles for the tile layer.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileSource.GetHeight">
+    <summary>Returns the pixel height of each tile in the tile source.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileLayer.ToString">
+    <summary>Converts the TileLayer object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileLayer.SetOptions(WebSharper.Bing.Maps.TileLayerOptions)">
+    <summary>Sets options for the tile layer.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileLayer.GetZIndex">
+    <summary>Returns the z-index of the tile layer with respect to other items on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileLayer.GetTileSource(System.String)">
+    <summary>Returns the tile source of the tile layer. The projection parameter accepts the following values: mercator, enhancedBirdseyeNorthUp, enhancedBirdseyeSouthUp, enhancedBirdseyeEastUp, enhancedBirdseyeWestUp</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.TileLayer.GetOpacity">
+    <summary>Returns the opacity of the tile layer, defined as a double between 0 (not visible) and 1.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.TileLayer.A">
+    <summary>The opacity of the color. The range of valid values is 0 to 255.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Range.Max">
+    <summary>The maximum value in the range.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Range.Min">
+    <summary>The minimum value in the range.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.ToString">
+    <summary>Converts the Pushpin object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.SetOptions(WebSharper.Bing.Maps.PushpinOptions)">
+    <summary>Sets options for the pushpin.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.SetLocation(WebSharper.Bing.Maps.Location)">
+    <summary>Sets the location of the pushpin.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetZIndex">
+    <summary>Returns the z-index of the pushpin with respect to other items on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetWidth">
+    <summary>Returns the width of the pushpin, which is the width of the pushpin icon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetVisible">
+    <summary>Returns whether the pushpin is visible. A value of false indicates that the pushpin is hidden, although it is still an entity on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetTypeName">
+    <summary>Returns the type of the pushpin.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetTextOffset">
+    <summary>Returns the amount the text is shifted from the pushpin icon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetText">
+    <summary>Returns the text associated with the pushpin.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetLocation">
+    <summary>Returns the location of the pushpin.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetHeight">
+    <summary>Returns the height of the pushpin, which is the height of the pushpin icon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetIcon">
+    <summary>Returns the pushpin icon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Pushpin.GetAnchor">
+    <summary>Returns the point on the pushpin icon which is anchored to the pushpin location. An anchor of (0,0) is the top left corner of the icon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.ToString">
+    <summary>Converts the Polyline object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.SetOptions(WebSharper.Bing.Maps.PolylineOptions)">
+    <summary>Sets options for the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.SetLocations(WebSharper.Bing.Maps.Location[])">
+    <summary>Sets the locations that define the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.GetVisible">
+    <summary>Returns whether the polyline is visible. A value of false indicates that the polyline is hidden, although it is still an entity on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.GetStrokeThickness">
+    <summary>Returns the thickness of the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.GetStrokeDashArray">
+    <summary>Returns the string that represents the stroke/gap sequence used to draw the the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.GetStrokeColor">
+    <summary>Returns the color of the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polyline.GetLocations">
+    <summary>Returns the locations that define the polyline.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.ToString">
+    <summary>Converts the Polygon object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.SetOptions(WebSharper.Bing.Maps.PolygonOptions)">
+    <summary>Sets options for the Polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.SetLocations(WebSharper.Bing.Maps.Location[])">
+    <summary>Sets the locations that define the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetVisible">
+    <summary>Returns whether the polygon is visible. A value of false indicates that the polygon is hidden, although it is still an entity on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetStrokeThickness">
+    <summary>Returns the thickness of the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetStrokeDashArray">
+    <summary>Returns the string that represents the stroke/gap sequence used to draw the outline of the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetStrokeColor">
+    <summary>Returns the color of the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetLocations">
+    <summary>Returns the locations that define the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Polygon.GetFillColor">
+    <summary>Returns the color of the inside of the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Point.ToString">
+    <summary>Converts the Point object into a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Point.Clone">
+    <summary>Returns a copy of the Point object.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Point.Y">
+    <summary>The y value of the coordinate.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Point.X">
+    <summary>The x value of the coordinate.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MouseEventArgs.GetY">
+    <summary>Returns the y-value of the pixel coordinate, relative to the map, of the mouse.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MouseEventArgs.GetX">
+    <summary>Returns the x-value of the pixel coordinate, relative to the map, of the mouse.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.Y">
+    <summary>Returns the y-value of the pixel coordinate, relative to the map, of the mouse.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.X">
+    <summary>Returns the x-value of the pixel coordinate, relative to the map, of the mouse.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.WheelData">
+    <summary>The number of units that the mouse wheel has changed.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.TargetType">
+    <summary>The type of the object that fired the event. Valid values include the following: 'map', 'polygon', 'polyline', or 'pushpin'</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.Target">
+    <summary>The object that fired the event.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.PageY">
+    <summary>The y-value of the pixel coordinate on the page of the mouse cursor.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.PageX">
+    <summary>The x-value of the pixel coordinate on the page of the mouse cursor.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.OriginalEvent">
+    <summary>The original browser event.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.IsTouchEvent">
+    <summary>A boolean indicating whether the event that occurred was a touch event.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.IsSecondary">
+    <summary>A boolean indicating if the secondary mouse button (such as the right mouse button) was used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.IsPrimary">
+    <summary>A boolean indicating if the primary button (such as the left mouse button or a tap on a touch screen) was used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.Handled">
+    <summary>A boolean indicating whether the event is handled. If this property is set to true, the default map control behavior for the event is cancelled.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MouseEventArgs.EventName">
+    <summary>The event that occurred.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryPixelToLocation(WebSharper.Bing.Maps.Point[])">
+    <summary>Converts an array of Points relative to PixelReference.Viewport and returns an array of Locations if all points were converted. If any of the conversions fail, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryPixelToLocation(WebSharper.Bing.Maps.Point[],WebSharper.Bing.Maps.PixelReference)">
+    <summary>Converts an array of Points relative to the specified PixelReference and returns an array of Locations if all points were converted. If any of the conversions fail, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryPixelToLocation(WebSharper.Bing.Maps.Point)">
+    <summary>Converts a specified Point to a Location on the map relative to PixelReference.Viewport. If the map is not able to convert the Point, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryPixelToLocation(WebSharper.Bing.Maps.Point,WebSharper.Bing.Maps.PixelReference)">
+    <summary>Converts a specified Point to a Location on the map relative to the specified PixelReference. If the map is not able to convert the Point, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryLocationToPixel(WebSharper.Bing.Maps.Location[])">
+    <summary>Converts an array of Locations relative to PixelReference.Viewport and returns an array of Points if all locations were converted. If any of the conversions fail, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryLocationToPixel(WebSharper.Bing.Maps.Location[],WebSharper.Bing.Maps.PixelReference)">
+    <summary>Converts an array of Locations relative to the specified PixelReference and returns an array of Points if all locations were converted. If any of the conversions fail, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryLocationToPixel(WebSharper.Bing.Maps.Location)">
+    <summary>Converts a specified Location to a Point on the map relative to PixelReference.Viewport. If the map is not able to convert the Location, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.TryLocationToPixel(WebSharper.Bing.Maps.Location,WebSharper.Bing.Maps.PixelReference)">
+    <summary>Converts a specified Location to a Point on the map relative to the specified PixelReference. If the map is not able to convert the Location, null is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.SetView(WebSharper.Bing.Maps.ViewOptions)">
+    <summary>Sets the map view based on the specified options.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.SetOptions(WebSharper.Bing.Maps.Size)">
+    <summary>Sets the height and width of the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.SetMapType(WebSharper.Bing.Maps.MapTypeId)">
+    <summary>Sets the current map type. The specified mapTypeId must be a valid map type ID or a registered map type ID.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.IsRotationEnabled">
+    <summary>Returns true if the current map type allows the heading to change; false if the display heading is fixed.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.IsMercator">
+    <summary>Returns whether the map is in a regular Mercator nadir mode.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetZoomRange">
+    <summary>Returns the range of valid zoom levels for the current map view.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetZoom">
+    <summary>Returns the zoom level of the current map view.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetWidth">
+    <summary>Returns the width of the map control.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetViewportY">
+    <summary>Returns the y coordinate of the viewport origin (the center of the map), relative to the page.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetViewportX">
+    <summary>Returns the x coordinate of the viewport origin (the center of the map), relative to the page.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetUserLayer">
+    <summary>Returns the map’s user node.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetTargetZoom">
+    <summary>Returns the zoom level of the view to which the map is navigating.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetTargetMetersPerPixel">
+    <summary>Returns the scale in meters per pixel of the center of the view to which the map is navigating.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetTargetHeading">
+    <summary>Returns the heading of the view to which the map is navigating.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetTargetCenter">
+    <summary>Returns the center location of the view to which the map is navigating.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetTargetBounds">
+    <summary>Returns the location rectangle that defines the boundaries of the view to which the map is navigating.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetRootElement">
+    <summary>Returns the map’s root node.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetPageY">
+    <summary>Returns the y coordinate of the top left corner of the map control, relative to the page.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetPageX">
+    <summary>Returns the x coordinate of the top left corner of the map control, relative to the page.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetOptions">
+    <summary>Returns the map options that have been set. Note that if an option is not set, then the default value for that option is assumed and getOptions returns undefined for that option.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetModeLayer">
+    <summary>Returns the map’s mode node.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetMetersPerPixel">
+    <summary>Returns the current scale in meters per pixel of the center of the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetMapTypeId">
+    <summary>Returns a string that represents the current map type displayed on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetImageryId">
+    <summary>Returns the string that represents the imagery currently displayed on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetHeight">
+    <summary>Returns the height of the map control.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetHeading">
+    <summary>Returns the heading of the current map view.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetCredentials(System.Action{Microsoft.FSharp.Core.FSharpOption{System.String}})">
+    <summary>Gets the session ID. This method calls the callback function with the session ID as the first parameter.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetCopyrights">
+    <summary>Gets the array of strings representing the attributions of the imagery currently displayed on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetCenter">
+    <summary>Returns the location of the center of the current map view.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.GetBounds">
+    <summary>Returns the location rectangle that defines the boundaries of the current map view.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.Focus">
+    <summary>Applies focus to the map control so that it responds to keyboard events.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.Dispose">
+    <summary>Deletes the Map object and releases any associated resources.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Map.Blur">
+    <summary>Removes focus from the map control so that it does not respond to keyboard events.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Map.Entities">
+    <summary>The map’s entities. Use this property to add or remove entities from the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Location.ToString">
+    <summary>Converts the Location object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Location.Clone">
+    <summary>Returns a copy of the Location object.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Location.Longitude">
+    <summary>The longitude of the location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Location.Latitude">
+    <summary>The latitude of the location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Location.AltitudeMode">
+    <summary>The reference from which the altitude is measured.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Location.Altitude">
+    <summary>The altitude of the location.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.ShiftKey">
+    <summary>A boolean indicating if the SHIFT key was pressed.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.OriginalEvent">
+    <summary>The original browser event.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.KeyCode">
+    <summary>The code that identifies the keyboard key that was pressed.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.Handled">
+    <summary>A boolean indicating whether the event is handled. If this property is set to true, the default map control behavior for the event is cancelled.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.EventName">
+    <summary>The event that occurred.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.CtrlKey">
+    <summary>A boolean indicating if the CTRL key was pressed.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.KeyEventArgs.AltKey">
+    <summary>A boolean indicating if the ALT key was pressed.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.ToString">
+    <summary>Converts the Infobox object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.SetOptions(WebSharper.Bing.Maps.InfoboxOptions)">
+    <summary>Sets options for the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.SetLocation(WebSharper.Bing.Maps.Location)">
+    <summary>Sets the location on the map where the anchor of the infobox is attached.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.SetHtmlContent(System.String)">
+    <summary>Sets the HTML content of the infobox. You can use this method to change the look of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetZIndex">
+    <summary>Returns the z-index of the infobox with respect to other items on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetWidth">
+    <summary>Returns the width of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetVisible">
+    <summary>Returns whether the infobox is visible. A value of false indicates that the infobox is hidden, although it is still an entity on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetTitleClickHandler">
+    <summary>Returns the name of the function to call when the title of the infobox is clicked.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetTitle">
+    <summary>Returns a string that is the title of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetShowPointer">
+    <summary>Returns a boolean indicating whether the infobox is drawn with a pointer.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetShowCloseButton">
+    <summary>Returns a boolean indicating whether the infobox close button is shown.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetOptions">
+    <summary>Returns the infobox options.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetOffset">
+    <summary>Returns the amount the infobox pointer is shifted from the location of the infobox, or if showPointer is false, then it is the amount the infobox bottom left edge is shifted from the location of the infobox. The default value is (0,0), which means there is no offset.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetLocation">
+    <summary>Returns the location on the map where the infobox’s anchor is attached.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetId">
+    <summary>Returns the ID of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetHtmlContent">
+    <summary>Returns the infobox as HTML.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetHeight">
+    <summary>Returns the height of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetDescription">
+    <summary>Returns the string that is printed inside the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetAnchor">
+    <summary>Returns the point on the infobox which is anchored to the map. An anchor of (0,0) is the top left corner of the infobox.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Infobox.GetActions">
+    <summary>Returns a list of actions, where each item is a name-value pair indicating an action link name and the event name for the action that corresponds to that action link.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.GeoLocationProvider.RemoveAccuracyCircle">
+    <summary>Removes the current geo location accuracy circle.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.GeoLocationProvider.GetCurrentPosition(WebSharper.Bing.Maps.PositionOptions)">
+    <summary>Obtains the user’s current location and displays it on the map. Important: The accuracy of the user location obtained using this method varies widely depending on the desktop browser or mobile device of the requesting client. Desktop users may experience low user location accuracy (accuracy circles with large radiuses), while mobile user location accuracy may be much greater (a few meters).</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.GeoLocationProvider.CancelRequest">
+    <summary>Cancels the processing of the current getCurrentPosition request. This method prevents the response from being processed.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.GeoLocationProvider.AddAccuracyCircle(WebSharper.Bing.Maps.Location,System.Double,System.Int32,WebSharper.Bing.Maps.PositionCircleOptions)">
+    <summary>Renders a geo location accuracy circle on the map. The accuracy circle is created with the center at the specified location, using the given radiusInMeters, and with the specified number of segments for the accuracy circle polygon. Additional options are also available to adjust the style of the polygon.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.ToString">
+    <summary>Converts the EntityCollection object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.SetOptions(WebSharper.Bing.Maps.EntityCollectionOptions)">
+    <summary>Sets the options for the entity collection.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.RemoveAt(System.Int32)">
+    <summary>Removes the entity at the specified index from the collection and returns it.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Remove(WebSharper.Bing.Maps.Entity)">
+    <summary>Removes the specified entity from the collection and returns it.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Push(WebSharper.Bing.Maps.Entity)">
+    <summary>Adds the specified entity to the last position in the collection.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Pop">
+    <summary>Removes the last entity from the collection and returns it.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Insert(WebSharper.Bing.Maps.Entity,System.Int32)">
+    <summary>Inserts the specified entity into the collection at the given index.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.IndexOf(WebSharper.Bing.Maps.Entity)">
+    <summary>Returns the index of the specified entity in the collection. If the entity is not found in the collection, -1 is returned.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.GetZIndex">
+    <summary>Gets the z-index of the entity collection with respect to other items on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.GetVisible">
+    <summary>Returns whether the entity collection is visible on the map.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.GetLength">
+    <summary>Returns the number of entities in the collection.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Get(System.Int32)">
+    <summary>Returns the entity at the specified index in the collection.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.EntityCollection.Clear">
+    <summary>Removes all entities from the collection.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Color.ToString">
+    <summary>Converts the Color object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Color.ToHex">
+    <summary>Converts the Color into a 6-digit hex string. Opacity is ignored. For example, a Color with values (255,0,0,0) is returned as hex string #000000.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Color.GetOpacity">
+    <summary>Returns the opacity of the Color as a value between 0 (a=0) and 1 (a=255).</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.Color.Clone">
+    <summary>Returns a copy of the Color object.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Color.B">
+    <summary>The blue value of the color. The range of valid values is 0 to 255.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Color.G">
+    <summary>The green value of the color. The range of valid values is 0 to 255.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Color.R">
+    <summary>The red value of the color. The range of valid values is 0 to 255.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.Color.A">
+    <summary>The opacity of the color. The range of valid values is 0 to 255.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Color(System.Int32,System.Int32,System.Int32,System.Int32)">
+    <summary>Initializes a new instance of the Color class. The a parameter represents opacity. The range of valid values for all parameters is 0 to 255.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.TileLayer(WebSharper.Bing.Maps.TileLayerOptions)">
+    <summary>Initializes a new instance of the TileLayer class.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.TileSource(WebSharper.Bing.Maps.TileSourceOptions)">
+    <summary>Initializes a new instance of the TileSource  class.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.RemoveHandler(WebSharper.Bing.Maps.EventHandler)">
+    <summary>Detaches the specified handler from the event.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.Invoke(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Event)">
+    <summary>Invokes an event on the target. This causes all handlers for the specified eventName to be called.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.HasHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Event)">
+    <summary>Checks if the target has any attached event handler.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddThrottledHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.UnitEvent,System.Action,System.Double)">
+    <summary>Attaches the handler for the event that is thrown by the target, where the minimum interval between events (in milliseconds) is specified in the ThrottleInterval parameter. The last occurrence of the event is called after the specified ThrottleInterval.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddThrottledHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.MouseEvent,System.Action{WebSharper.Bing.Maps.MouseEventArgs},System.Double)">
+    <summary>Attaches the handler for the event that is thrown by the target, where the minimum interval between events (in milliseconds) is specified in the ThrottleInterval parameter. The last occurrence of the event is called after the specified ThrottleInterval.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddThrottledHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.KeyEvent,System.Action{WebSharper.Bing.Maps.KeyEventArgs},System.Double)">
+    <summary>Attaches the handler for the event that is thrown by the target, where the minimum interval between events (in milliseconds) is specified in the ThrottleInterval parameter. The last occurrence of the event is called after the specified ThrottleInterval.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.UnitEvent,System.Action)">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.WaypointEvent,System.Action{WebSharper.Bing.Maps.Directions.WaypointEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.DirectionsStepEvent,System.Action{WebSharper.Bing.Maps.Directions.DirectionsStepEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.RouteSelectorEvent,System.Action{WebSharper.Bing.Maps.Directions.RouteSelectorEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.DirectionsEvent,System.Action{WebSharper.Bing.Maps.Directions.DirectionsEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.DirectionsErrorEvent,System.Action{WebSharper.Bing.Maps.Directions.DirectionsErrorEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.WaypointRenderEvent,System.Action{WebSharper.Bing.Maps.Directions.WaypointRenderEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.RouteSummaryRenderEvent,System.Action{WebSharper.Bing.Maps.Directions.RouteSummaryRenderEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.DirectionsStepRenderEvent,System.Action{WebSharper.Bing.Maps.Directions.DirectionsStepRenderEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.Directions.RouteSelectorRenderEvent,System.Action{WebSharper.Bing.Maps.Directions.RouteSelectorRenderEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.MouseEvent,System.Action{WebSharper.Bing.Maps.MouseEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Events.AddHandler(WebSharper.Bing.Maps.Entity,WebSharper.Bing.Maps.KeyEvent,System.Action{WebSharper.Bing.Maps.KeyEventArgs})">
+    <summary>Attaches the handler for the event that is thrown by the target.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.PixelReference.IsValid(WebSharper.Bing.Maps.PixelReference)">
+    <summary>Determines whether the specified reference is a supported PixelReference.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Color.FromHex(System.String)">
+    <summary>Converts the specified hex string to a Color.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Color.CloneColor(WebSharper.Bing.Maps.MapApi.Color)">
+    <summary>Creates a copy of the Color object.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LabelOverlay.IsValid(WebSharper.Bing.Maps.LabelOverlay)">
+    <summary>Determines whether the specified labelOverlay is a supported LabelOverlay.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.LabelOverlay.Visible">
+    <summary>Map labels are shown on top of imagery.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.LabelOverlay.Hidden">
+    <summary>Map labels are not shown on top of imagery.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Point.clone(WebSharper.Bing.Maps.Point)">
+    <summary>Returns a copy of the Point object.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Point.AreEqual(WebSharper.Bing.Maps.Point,WebSharper.Bing.Maps.Point)">
+    <summary>Determines if the specified points are equal.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.ToString">
+    <summary>Converts the LocationRect object to a string.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.Intersects(WebSharper.Bing.Maps.LocationRect)">
+    <summary>Returns whether the specified LocationRect intersects with this LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetNorthwest">
+    <summary>Returns the Location that defines the northwest corner of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetSoutheast">
+    <summary>Returns the Location that defines the southeast corner of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetSouth">
+    <summary>Returns the latitude that defines the southern edge of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetNorth">
+    <summary>Returns the latitude that defines the northern edge of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetWest">
+    <summary>Returns the latitude that defines the western edge of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.GetEast">
+    <summary>Returns the longitude that defines the eastern edge of the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.Contains(WebSharper.Bing.Maps.Location)">
+    <summary>Returns whether the specified Location is within the LocationRect.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.Clone">
+    <summary>Returns a copy of the LocationRect object.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.FromString(System.String)">
+    <summary>Creates a LocationRect from a string with the following format: "north,west,south,east". North, west, south and east specify the coordinate number values.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.FromLocations(WebSharper.Bing.Maps.Location[])">
+    <summary>Returns a LocationRect using an array of locations.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.FromEdges(System.Double,System.Double,System.Double,System.Double,System.Double,WebSharper.Bing.Maps.AltitudeReference)">
+    <summary>Returns a LocationRect using the specified northern and southern latitudes and western and eastern longitudes for the rectangle boundaries.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.LocationRect.FromCorners(WebSharper.Bing.Maps.Location,WebSharper.Bing.Maps.Location)">
+    <summary>Returns a LocationRect using the specified locations for the northwest and southeast corners.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.LocationRect.Width">
+    <summary>The width, in degrees, of the rectangle.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.LocationRect.Height">
+    <summary>The height, in degrees, of the rectangle.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.LocationRect.Center">
+    <summary>The location that defines the center of the rectangle.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Location.NormalizeLongitude(System.Double)">
+    <summary>Normalizes the specified longitude so that it is between -180 and 180.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.Location.AreEqual(WebSharper.Bing.Maps.Location,WebSharper.Bing.Maps.Location)">
+    <summary>Determines if the specified Location objects are equal.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.Road">
+    <summary>The road map style is being used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.OrdnanceSurvey">
+    <summary>Ordinance Survey (mkt=en-gb) map type is being used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.Mercator">
+    <summary>The Mercator style is being used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.CollinsBart">
+    <summary>Collin’s Bart (mkt=en-gb) map type is being used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.Birdseye">
+    <summary>The bird’s eye map type is being used.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.Auto">
+    <summary>The map is set to choose the best imagery for the current view.</summary>
+  </member>
+  <member name="P:WebSharper.Bing.Maps.MapApi.MapTypeId.Aerial">
+    <summary>The aerial map style is being used.</summary>
+  </member>
+  <member name="M:WebSharper.Bing.Maps.MapApi.AltitudeReference.IsValid(WebSharper.Bing.Maps.AltitudeReference)">
+    <summary>Determines if the specified reference is a supported AltitudeReference.</summary>
+  </member>
+</doc>
